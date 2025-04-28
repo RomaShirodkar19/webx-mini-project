@@ -55,9 +55,9 @@
                     <div class="no-image">No Image Available</div>
                     {% endif %}
                     <h2>{{ product['name'] }}</h2>
-                    <p><strong>${{ "%.2f"|format(product['price']) }}</strong></p>
+                    <p><strong>₹{{ "%.2f"|format(product['price']) }}</strong></p>
                     
-                    <!-- Updated Add to Cart form -->
+                    
                     {% if current_user.is_authenticated %}
                     <form action="{{ url_for('add_to_cart', product_id=product['_id']) }}" method="POST">
                         <button type="submit" class="btn">Add to Cart</button>

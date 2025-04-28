@@ -14,6 +14,7 @@
             <input type="text" name="name" value="{{ product['name'] }}" required><br>
             <input type="number" name="price" step="0.01" value="{{ product['price'] }}" required><br>
             <textarea name="desc" required>{{ product['desc'] }}</textarea><br>
+            <input type="text" name="image_url" value="{{ product.get('image_url', '') }}" placeholder="Image URL"><br>
             <button type="submit">Update Product</button>
         </form>
     </div>
